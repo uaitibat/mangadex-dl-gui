@@ -7,11 +7,11 @@ Interface GTK 4 em Python para baixar e ler mangás do **MangaDex** e **Comick**
 ### Home
 ![Home](fts/home.png)
 
-### Download
-![Download](fts/download.png)
-
 ### MDLists
 ![MDLists](fts/mdlists.png)
+
+### Download
+![Download](fts/download.png)
 
 ### Reader
 ![Reader](fts/reader.png)
