@@ -1,0 +1,39 @@
+app.py:345 - Quebrar monolito de 3773 linhas em core/config.py, core/cache.py, core/download.py, ui/home.py, ui/result.py, ui/reader.py, ui/account.py
+
+pyproject.toml:1 - Adicionar dependencies = ["PyGObject"] e [project.scripts] mangadex-dl-gtk = "app:main"
+
+app.py:3701 - Corrigir _current_wallpaper_path() que sempre retorna FALLBACK_WALLPAPER e ignora wallpaper_url salvo
+
+app.py:2505 - Corrigir download Comick que tenta usar mangadex-downloader com hid do Comick
+
+mangadex-dl-gui.desktop:5 - Trocar path absoluto /mnt/arquivos/... por Exec=mangadex-dl-gtk
+
+app.py:1334 - Remover print("DEBUG: ...") e usar logging
+
+services/mangadex_api.py:22 + services/comick_api.py:21 - Criar services/models.py único para MangaDetails/ChapterGroup/ChapterPages
+
+services/comick_api.py:65 - Extrair _parse_comic_data() para remover duplicação do bloco API vs scrape
+
+config.json:1 + .gitignore:1 - Remover config.json do git com git rm --cached config.json e criar config.json.example
+
+app.py:1366 - Corrigir race condition do current_source capturando valor local antes do threading.Thread
+
+app.py:3714 - Remover _clear_volatile_cache() do atexit ou trocar por TTL, hoje apaga tudo a cada execução
+
+pyproject.toml:7 - Adicionar ruff, mypy, pytest e CI
+
+README.md:1 - Documentar dependências PyGObject Gtk4, pipx install mangadex-downloader e XDG_CONFIG_HOME
+
+services/comick_api.py:150 - Adicionar retry/backoff/rate-limit no scraping de __NEXT_DATA__
+
+app.py:1329 - Persistir current_source do source_switch em config["source"]
+
+app.py:2528 - Tornar parsing do output Finished download chapter menos frágil
+
+app.py:2620 - Truncar nomes de pasta em _safe_folder_name() para limite de 255 chars
+
+style.css:1 - Extrair cores para variáveis :root (#050509, #ff7a38)
+
+app.py:498 - Usar locale.getdefaultlocale() em _normalize_ui_language()
+
+app.py:1358 - Mover texto hardcoded "Use uma URL válida do comick.io." para UI_TEXT:73
