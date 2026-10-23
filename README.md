@@ -110,3 +110,7 @@ O `config.json` com credenciais nunca é versionado (está no `.gitignore`).
 ---
 
 Feito com PyGObject + GTK 4.
+
+<div align="center">
+  <img src="https://giffiles.alphacoders.com/171/171388.gif" alt="MangaDex-dl" width="1920">
+</div>
