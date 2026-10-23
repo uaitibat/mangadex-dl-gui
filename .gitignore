@@ -1,0 +1,61 @@
+# Config com credenciais locais
+config.json
+
+# Cache de imagens e perfis
+assets/reader/
+assets/profile/
+assets/wallpapers/
+assets/covers/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+.env
+.buildenv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build / empacotamento
+build/
+dist/
+*.egg-info/
+*.egg
+.installed.cfg
+*.egg-link
+
+# Testes
+.pytest_cache/
+.mypy_cache/
+.hypothesis/
+
+# Documentação
+site/
+_build/
+
+# Outros
+*.tmp
+*.bak
+*.swp
